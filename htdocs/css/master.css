@@ -1,0 +1,45 @@
+#heading{
+    background-color: red;
+    width: 100%;
+    height: 100px;
+}
+
+#workspace{
+    background-color: lightblue;
+    width: 100%;
+    height: 100%;
+}
+
+#enemies{
+    background-color: coral;
+    width: 50%;
+    height: 500px;
+    float: left;
+}
+
+#enemy-stats{
+    border: 5px solid black;
+}
+
+#xp-remaining{
+    float: right;
+}
+
+#allies{
+    background-color: cyan;
+    width: 50%;
+    height: 500px;
+    float: left;
+}
+
+#enemy-template{
+    visibility: hidden;
+    height:0px;
+}
+
+.enemy{
+    height: 100px;
+    width: auto;
+    margin: 10px;
+    background-color: red;
+}

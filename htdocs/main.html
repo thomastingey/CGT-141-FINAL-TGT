@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EncounterCalc</title>
 
+    <link rel="stylesheet" href="css/master.css" />
+    <script src="javaScript/script.js"></script>
+</head>
+<body onload="addEnemy()">
+    <div id = "heading"></div>
+    <div id = "workspace">
+        <div id = "enemies">
+            <div id = "enemy-stats">
+                <div id = "xp-value" class = "info"><em>Xp Value: </em>5,000xp</div>
+                <div id = "xp-remaining" class = "info"><em>Xp Remaining: </em>--</div>
+                <div id = "rating" class = "info"><em>difficulty rating: </em>Medium</div>
+
+                <button id = "add-enemy" onclick = "addEnemy()">&plus; add enemy</button>
+            </div>
+
+            <div id = "enemy-space">
+                <div id = "enemy-template">
+                    <form>"Hello Adventerers"</form>
+                </div>
+            </div>
+        </div>
+
+        <div id = "allies">
+            <div id = "player-stats">
+                <div><em>Xp Budgets:</em></div>
+                <div id = "xp-budgets">
+                    <button id = "low"><em>Low: </em>1,000xp</button>
+                    <button id = "medium"><em>Medium: </em>2,000xp</button>
+                    <button id = "high"><em>High: </em>4,4000xp</button>
+                </div>
+
+                <button id = "add-player">&plus; add player</button>
+                <button id = "add-ally">&plus; add ally</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
