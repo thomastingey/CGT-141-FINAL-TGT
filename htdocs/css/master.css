@@ -17,7 +17,7 @@
     float: left;
 }
 
-#enemy-stats{
+#enemy-stats, #player-stats{
     border: 5px solid black;
 }
 
@@ -32,14 +32,44 @@
     float: left;
 }
 
-#enemy-template{
+#npc-template, #player-template{
     visibility: hidden;
     height:0px;
 }
 
-.enemy{
-    height: 100px;
-    width: auto;
+
+
+.info{
+    color: black
+}
+
+.warning{
+    color: red
+}
+
+.not-selected{
+    background-color: blue;
+}
+
+.selected{
+    background-color: blueviolet;
+}
+
+
+
+.enemy, .ally, .player{
+    padding: 10px;
     margin: 10px;
+}
+
+.enemy{ 
     background-color: red;
+}
+
+.ally{
+    background-color: blue;
+}
+
+.player{
+    background-color: green;
 }

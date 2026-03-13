@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/master.css" />
     <script src="javaScript/script.js"></script>
 </head>
-<body onload="addEnemy()">
+<body onload="setUp()">
     <div id = "heading"></div>
     <div id = "workspace">
         <div id = "enemies">
@@ -21,23 +21,54 @@
             </div>
 
             <div id = "enemy-space">
-                <div id = "enemy-template">
-                    <form>"Hello Adventerers"</form>
+                <div id = "npc-template">
+                    <label for = "fmname">Name: </label>
+                    <input type="text" class = "fmname" name = "fmname">
+                    <button type = "button" class = "delete"
+                        onclick = "this.parentElement.remove();update()">Delete</button><br>
+
+                    <label for = "fmCR"><em>CR: </em></label>
+                    <select class = "fmCR" name = "fmCR" oninput="update()">
+                        <option value = "--">--</option>
+                    </select><br>
+                    
+                    <label for = "fmnum"><em>Quantity: </em></label>
+                    <input type = "number" class = "fmnum" name = "fmnum" value = 1 oninput="update()">
                 </div>
+
+
+
             </div>
         </div>
 
         <div id = "allies">
             <div id = "player-stats">
-                <div><em>Xp Budgets:</em></div>
+                <div class = "info"><em>Xp Budgets:</em></div>
                 <div id = "xp-budgets">
-                    <button id = "low"><em>Low: </em>1,000xp</button>
-                    <button id = "medium"><em>Medium: </em>2,000xp</button>
-                    <button id = "high"><em>High: </em>4,4000xp</button>
+                    <button id = "low" onclick="setBudget(1)" class = "not-selected"><em>Low: </em>1,000xp</button>
+                    <button id = "medium" onclick="setBudget(2)" class = "not-selected"><em>Medium: </em>2,000xp</button>
+                    <button id = "high" onclick="setBudget(3)" class = "not-selected"><em>High: </em>4,4000xp</button>
                 </div>
 
-                <button id = "add-player">&plus; add player</button>
-                <button id = "add-ally">&plus; add ally</button>
+                <button type = "button" id = "add-player" onclick = "addPlayer()">
+                    &plus; add player</button>
+                <button type = "button" id = "add-ally" onclick = "addAlly()">
+                    &plus; add ally</button>
+            </div>
+
+            <div id = "player-space">
+
+                <div id = "player-template">
+                    <label for = "fpname">Name: </label>
+                    <input type="text" class = "fpname" name = "fpname">
+                    <button type = "button" class = "delete"
+                        onclick = "this.parentElement.remove();update()">Delete</button><br>
+
+                    <label for = "fpLevel">Level: </label>
+                    <select class = "fpLevel" name = "fpCR" oninput="update()">
+                    </select><br>
+                </div>
+                
             </div>
         </div>
     </div>
