@@ -1,6 +1,5 @@
 body{
     padding: 0px;
-    background-color: linear-gradient(95, red, aqua);
 }
 
 #heading{
@@ -11,29 +10,114 @@ body{
 }
 
 #workspace{
-    background-color: lightblue;
-    width: 100%;
-    height: 150px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
+}
+
+button{
+    border-radius: 5px;
+    box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.2);
+    font-size: larger;
 }
 
 #stats{
-    background-color: coral;
+    background-image: linear-gradient(150deg, white 0%, ivory 25%, ivory 75%, lightgray);
+    border-radius: 20px;
+    box-shadow: 5px 10px 10px lightgray;
     float: top;
-    height: 100%;
-    border: 5px solid black;
+    height: 100px;
+    margin: 10px;
+    border: 1px solid grey;
+    margin-bottom: 20px;
     box-sizing: border-box;
+}
+
+#details{
+    width: 100%;
+    height: 65px;
+    margin: 0px;
+}
+
+#buttons{
+    padding-top: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 30px;
+}
+
+#budget-label{
+    float: left;
+}
+
+#xp-budgets{
+    float: top;
+}
+
+#add-enemy{
+    background-color: red;
+    background-image: linear-gradient(95deg, rgb(255, 50, 0), rgb(255, 0, 50));
+    border: 0px solid navy;
+    color: ivory;
+    padding: 3px 5px;
+}
+
+#add-enemy:hover{
+    background-image: linear-gradient(95deg, rgb(225, 50, 0), rgb(225, 0, 50))
+}
+
+#add-player{
+    background-color: green;
+    background-image: linear-gradient(95deg, rgb(50, 128, 0), rgb(0, 128, 50));
+    border: 0px solid navy;
+    color: ivory;
+    padding: 3px 5px;
+}
+
+#add-player:hover{
+    background-image: linear-gradient(95deg, rgb(50, 105, 0), rgb(0, 105, 50))
+}
+
+#add-ally{
+    background-color: blue;
+    background-image: linear-gradient(95deg, rgb(0, 50, 255), rgb(50, 0, 255));
+    border: 0px solid navy;
+    color: ivory;
+    padding: 3px 5px;
+}
+
+#add-ally:hover{
+    background-image: linear-gradient(95deg, rgb(0, 50, 225), rgb(50, 0, 225))
 }
 
 #enemy-stats{
     box-sizing: border-box;
     width: 50%;
     float: left;
+    padding:10px;
 }
 
 #player-stats{
     box-sizing: border-box;
     width: 50%;
     float: right;
+    padding: 10px;
+}
+
+#enemy-buttons{
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding:20px;
+    padding-top: 0px;
+}
+
+#ally-buttons{
+    box-sizing: border-box;
+    width: 50%;
+    float: right;
+    padding: 20px;
+    padding-top: 0px;
 }
 
 #xp-remaining{
@@ -41,20 +125,33 @@ body{
 }
 
 #blocks{
-    background-color: cyan;
+    background-color: white;
     width: 100%;
     float: left;
 }
 
 #enemy-space{
+    background-image: linear-gradient(150deg, white 0%, ivory 25%, ivory 100%);
+    border: 1px solid grey;
+    border-radius: 20px;
+    box-shadow: 5px 10px 10px lightgray;
     box-sizing: border-box;
-    width: 50%;
+    width: calc(50% - 20px);
+    min-height: calc(100vh - 275px);
+    margin: 10px;
     float: left;
+
 }
 
 #player-space{
+    background-image: linear-gradient(150deg, white 0%, ivory 25%, ivory 75%, lightgray);
+    border: 1px solid grey;
+    border-radius: 20px;
+    box-shadow: 5px 10px 10px lightgray;
     box-sizing: border-box;
-    width: 50%;
+    width: calc(50% - 20px);
+    min-height: calc(max(100vh - 275px));
+    margin: 10px;
     float: right;
 }
 
@@ -66,19 +163,35 @@ body{
 
 
 .info{
+    font-size: larger;
     color: black
 }
 
 .warning{
+    font-size: larger;
     color: red
 }
 
 .not-selected{
-    background-color: blue;
+    font-family: serif;
+    font-size: larger;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.not-selected:hover{
+    text-decoration: underline;
 }
 
 .selected{
-    background-color: blueviolet;
+    font-family: serif;
+    font-size: larger;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 
@@ -86,16 +199,38 @@ body{
 .enemy, .ally, .player{
     padding: 10px;
     margin: 10px;
+    font-size: larger;
+}
+
+.delete{
+    float: right;
+    margin-right: 0px;
+}
+
+.fmname, .fpname{
+    width: 65%
 }
 
 .enemy{ 
     background-color: red;
+    background-image: linear-gradient(150deg, white 0%, ivory 25%, ivory 60%, red);
+    border: 1px solid grey;
+    border-radius: 20px;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .ally{
     background-color: blue;
+    background-image: linear-gradient(150deg, white 0%, ivory 25%, ivory 60%, blue);
+    border: 1px solid grey;
+    border-radius: 20px;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .player{
     background-color: green;
+    background-image: linear-gradient(150deg, white 0%, ivory 25%, ivory 60%, green);
+    border: 1px solid grey;
+    border-radius: 20px;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
 }

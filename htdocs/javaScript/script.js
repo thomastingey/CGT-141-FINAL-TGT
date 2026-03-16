@@ -92,8 +92,9 @@ function setUp(){
     addEnemy();
 
     addPlayer();
-    
-    addAlly();
+    addPlayer();
+    addPlayer();
+    addPlayer();
 }
 
 function update(){
@@ -133,17 +134,17 @@ function update(){
 
     document.getElementById("xp-value").innerHTML = "<em>Xp Value: </em>" + 
         Math.max(0, xp).toLocaleString("en-US") + "xp";
-    document.getElementById("low").innerHTML = "<em>Low: <em>" +
+    document.getElementById("low").innerHTML = "<em>Low: </em>" +
         low.toLocaleString("en-US") + "xp"
-    document.getElementById("medium").innerHTML = "<em>Medium: <em>" +
+    document.getElementById("medium").innerHTML = "<em>Medium: </em>" +
         medium.toLocaleString("en-US") + "xp"
-    document.getElementById("high").innerHTML = "<em>High: <em>" +
+    document.getElementById("high").innerHTML = "<em>High: </em>" +
         high.toLocaleString("en-US") + "xp"
     
 
     let rating = document.getElementById("rating")
     rating.setAttribute("class", "info")
-    rating.innerHTML = "<em>difficulty rating: </em>"
+    rating.innerHTML = "<em>Difficulty Rating: </em>"
     if(xp <= low){
         rating.innerHTML += "Low"
     }else if(xp <= medium){
