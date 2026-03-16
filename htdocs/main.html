@@ -11,7 +11,8 @@
 <body onload="setUp()">
     <div id = "heading"></div>
     <div id = "workspace">
-        <div id = "enemies">
+        
+        <div id = "stats">
             <div id = "enemy-stats">
                 <div id = "xp-value" class = "info"><em>Xp Value: </em>5,000xp</div>
                 <div id = "xp-remaining" class = "info"><em>Xp Remaining: </em>--</div>
@@ -20,6 +21,23 @@
                 <button id = "add-enemy" onclick = "addEnemy()">&plus; add enemy</button>
             </div>
 
+            <div id = "player-stats">
+                <div class = "info"><em>Xp Budgets:</em></div>
+                <div id = "xp-budgets">
+                    <button id = "low" onclick="setBudget(1)" class = "not-selected"><em>Low: </em>1,000xp</button>
+                    <button id = "medium" onclick="setBudget(2)" class = "not-selected"><em>Medium: </em>2,000xp</button>
+                    <button id = "high" onclick="setBudget(3)" class = "not-selected"><em>High: </em>4,4000xp</button>
+                </div>
+
+                <button type = "button" id = "add-player" onclick = "addPlayer()">
+                    &plus; add player</button>
+                <button type = "button" id = "add-ally" onclick = "addAlly()">
+                    &plus; add ally</button>
+            </div>
+        </div>
+
+
+        <div id = "blocks">
             <div id = "enemy-space">
                 <div id = "npc-template">
                     <label for = "fmname">Name: </label>
@@ -38,22 +56,6 @@
 
 
 
-            </div>
-        </div>
-
-        <div id = "allies">
-            <div id = "player-stats">
-                <div class = "info"><em>Xp Budgets:</em></div>
-                <div id = "xp-budgets">
-                    <button id = "low" onclick="setBudget(1)" class = "not-selected"><em>Low: </em>1,000xp</button>
-                    <button id = "medium" onclick="setBudget(2)" class = "not-selected"><em>Medium: </em>2,000xp</button>
-                    <button id = "high" onclick="setBudget(3)" class = "not-selected"><em>High: </em>4,4000xp</button>
-                </div>
-
-                <button type = "button" id = "add-player" onclick = "addPlayer()">
-                    &plus; add player</button>
-                <button type = "button" id = "add-ally" onclick = "addAlly()">
-                    &plus; add ally</button>
             </div>
 
             <div id = "player-space">

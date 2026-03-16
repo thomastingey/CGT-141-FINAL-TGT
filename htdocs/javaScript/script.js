@@ -92,9 +92,8 @@ function setUp(){
     addEnemy();
 
     addPlayer();
-    addPlayer();
-    addPlayer();
-    addPlayer();
+    
+    addAlly();
 }
 
 function update(){

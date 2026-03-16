@@ -1,35 +1,61 @@
+body{
+    padding: 0px;
+    background-color: linear-gradient(95, red, aqua);
+}
+
 #heading{
-    background-color: red;
     width: 100%;
     height: 100px;
+    margin: 0;
+    padding: 0;
 }
 
 #workspace{
     background-color: lightblue;
     width: 100%;
-    height: 100%;
+    height: 150px;
 }
 
-#enemies{
+#stats{
     background-color: coral;
+    float: top;
+    height: 100%;
+    border: 5px solid black;
+    box-sizing: border-box;
+}
+
+#enemy-stats{
+    box-sizing: border-box;
     width: 50%;
-    height: 500px;
     float: left;
 }
 
-#enemy-stats, #player-stats{
-    border: 5px solid black;
+#player-stats{
+    box-sizing: border-box;
+    width: 50%;
+    float: right;
 }
 
 #xp-remaining{
     float: right;
 }
 
-#allies{
+#blocks{
     background-color: cyan;
-    width: 50%;
-    height: 500px;
+    width: 100%;
     float: left;
+}
+
+#enemy-space{
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+}
+
+#player-space{
+    box-sizing: border-box;
+    width: 50%;
+    float: right;
 }
 
 #npc-template, #player-template{
