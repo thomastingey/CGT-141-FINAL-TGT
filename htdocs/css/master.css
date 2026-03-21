@@ -40,6 +40,7 @@ button{
 }
 
 #buttons{
+    padding: 20px;
     padding-top: 0px;
     margin: 0px;
     width: 100%;
@@ -60,6 +61,7 @@ button{
     border: 0px solid navy;
     color: ivory;
     padding: 3px 5px;
+    margin: 2px;
 }
 
 #add-enemy:hover{
@@ -72,6 +74,8 @@ button{
     border: 0px solid navy;
     color: ivory;
     padding: 3px 5px;
+    margin: 2px;
+    margin-right: 0px;
 }
 
 #add-player:hover{
@@ -84,6 +88,8 @@ button{
     border: 0px solid navy;
     color: ivory;
     padding: 3px 5px;
+    margin: 2px;
+    margin-left: 0px;
 }
 
 #add-ally:hover{
@@ -108,16 +114,13 @@ button{
     box-sizing: border-box;
     width: 50%;
     float: left;
-    padding:20px;
-    padding-top: 0px;
+    padding:0px;
 }
 
 #ally-buttons{
     box-sizing: border-box;
     width: 50%;
     float: right;
-    padding: 20px;
-    padding-top: 0px;
 }
 
 #xp-remaining{
@@ -131,7 +134,7 @@ button{
 }
 
 #enemy-space{
-    background-image: linear-gradient(150deg, white 0%, ivory 25%, ivory 100%);
+    background-image: linear-gradient(150deg, white 0%, ivory 50%);
     border: 1px solid grey;
     border-radius: 20px;
     box-shadow: 5px 10px 10px lightgray;
@@ -144,7 +147,7 @@ button{
 }
 
 #player-space{
-    background-image: linear-gradient(150deg, white 0%, ivory 25%, ivory 75%, lightgray);
+    background-image: linear-gradient(150deg, ivory 50%, lightgray 100%);
     border: 1px solid grey;
     border-radius: 20px;
     box-shadow: 5px 10px 10px lightgray;
@@ -205,6 +208,15 @@ button{
 .delete{
     float: right;
     margin-right: 0px;
+    margin-top: 0px;
+    background-color: red;
+    background-image: linear-gradient(95deg, rgb(255, 50, 0), rgb(255, 0, 50));
+    color: ivory;
+    font-size: medium;
+}
+
+.delete:hover{
+    background-image: linear-gradient(95deg, rgb(225, 50, 0), rgb(225, 0, 50))
 }
 
 .fmname, .fpname{
@@ -233,4 +245,35 @@ button{
     border: 1px solid grey;
     border-radius: 20px;
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 800px){
+    #enemy-stats{
+        width: 100%;
+        float: top;
+    }
+    #player-stats{
+        width: 100%;
+        float: top;
+    }
+    #enemy-buttons{
+        width: fit-content;
+        float: top;
+    }
+    #ally-buttons{
+        width: fit-content;
+        float: left;
+    }
+    #enemy-space{
+        width: calc(100% - 20px);
+        float: top;
+        min-height: 0%;
+        margin: 10px;
+    }
+    #player-space{
+        width: calc(100% - 20px);
+        float: top;
+        min-height: 0%;
+        margin: 10px;
+    }
 }
