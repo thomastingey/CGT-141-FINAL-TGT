@@ -97,7 +97,7 @@ function setUp(){
     addPlayer();
 }
 
-function update(){
+function update(statblock){
     xp = 0
     low = 0
     medium = 0
@@ -106,10 +106,16 @@ function update(){
     let enemySpace = document.getElementById("enemy-space")
     let playerSpace = document.getElementById("player-space")
 
+    if(statblock){
+        let selected = statblock.children[5].value
+        console.log(statblock.children[6].innerHTML)
+        statblock.children[6].innerHTML = "<em>XP: </em>" + enemyData[selected][1] + "xp"
+    }
+
     for(var i = 0; i < enemySpace.childElementCount; i++){
         if (enemySpace.children[i].getAttribute("class") == "enemy"){
             let selected = enemySpace.children[i].children[5].value;
-            let quantity = enemySpace.children[i].children[8].value;
+            let quantity = enemySpace.children[i].children[9].value;
             if(selected > -1){
                 xp += enemyData[selected][1] * quantity;
             }
@@ -119,7 +125,7 @@ function update(){
     for(var i = 0; i < playerSpace.childElementCount; i++){
         if (playerSpace.children[i].getAttribute("class") == "ally"){
             let selected = playerSpace.children[i].children[5].value;
-            let quantity = playerSpace.children[i].children[8].value;
+            let quantity = playerSpace.children[i].children[9].value;
             if(selected > -1){
                 xp -= enemyData[selected][1] * quantity;
             }

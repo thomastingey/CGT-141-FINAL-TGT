@@ -56,10 +56,12 @@
                         onclick = "this.parentElement.remove();update()">Delete</button><br>
 
                     <label for = "fmCR"><em>CR: </em></label>
-                    <select class = "fmCR" name = "fmCR" oninput="update()">
+                    <select class = "fmCR" name = "fmCR" oninput="update(this.parentElement);">
                         <option value = "--">--</option>
-                    </select><br>
-                    
+                    </select>
+                    <label><em>XP: </em>0xp</label>
+                    <br>
+
                     <label for = "fmnum"><em>Quantity: </em></label>
                     <input type = "number" class = "fmnum" name = "fmnum" value = 1 oninput="update()">
                 </div>
