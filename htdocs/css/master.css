@@ -225,7 +225,7 @@ button{
 
 .enemy{ 
     background-color: red;
-    background-image: linear-gradient(95deg, white 0%, ivory 25%, ivory 80%, red 90%);
+    background-image: linear-gradient(90deg, white 0%, ivory 25%, ivory 80%, red 90%);
     border: 1px solid grey;
     border-radius: 20px;
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
@@ -233,7 +233,7 @@ button{
 
 .ally{
     background-color: blue;
-    background-image: linear-gradient(95deg, white 0%, ivory 25%, ivory 80%, blue 90%);
+    background-image: linear-gradient(90deg, white 0%, ivory 25%, ivory 80%, blue 90%);
     border: 1px solid grey;
     border-radius: 20px;
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
@@ -241,7 +241,7 @@ button{
 
 .player{
     background-color: green;
-    background-image: linear-gradient(95deg, white 0%, ivory 25%, ivory 80%, green 90%);
+    background-image: linear-gradient(90deg, white 0%, ivory 25%, ivory 80%, green 90%);
     border: 1px solid grey;
     border-radius: 20px;
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
